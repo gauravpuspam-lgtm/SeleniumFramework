@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="loandepartment">
+	<listeners>
+		<listener class-name= "testcase.Listner"/>
+	</listeners>
+	<test name="Demo basics">
+		<classes>
+			<class name="testcase.testcases3"/>
+			<class name="testcase.basics"/>	
+		</classes>
+	</test>
+
+	<test name="home loan">
+		<classes>
+			<class name="testcase.Home">
+				<methods>
+					<exclude name="loginApihomeloan" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [loandepartment]">
+  <listeners>
+    <listener class-name="testcase.Listner"/>
+  </listeners>
+  <test name="Demo basics">
+    <classes>
+      <class name="testcase.testcases3"/>
+      <class name="testcase.basics"/>
+    </classes>
+  </test> <!-- Demo basics -->
+  <test name="home loan">
+    <classes>
+      <class name="testcase.Home">
+        <methods>
+          <exclude name="loginApihomeloan"/>
+        </methods>
+      </class> <!-- testcase.Home -->
+    </classes>
+  </test> <!-- home loan -->
+  <test name="Demo basics(failed)">
+    <classes>
+      <class name="testcase.basics">
+        <methods>
+          <include name="voitre"/>
+        </methods>
+      </class> <!-- testcase.basics -->
+      <class name="testcase.testcases3">
+        <methods>
+          <include name="LoginAPICarloan"/>
+        </methods>
+      </class> <!-- testcase.testcases3 -->
+    </classes>
+  </test> <!-- Demo basics(failed) -->
+</suite> <!-- Failed suite [loandepartment] -->
